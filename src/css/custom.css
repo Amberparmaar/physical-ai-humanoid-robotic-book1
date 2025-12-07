@@ -1,0 +1,110 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6d;
+  --ifm-code-font-size: 95%;
+}
+
+/* Dark theme override */
+html[data-theme='dark'] {
+  --ifm-color-primary: #4caf8b;
+  --ifm-color-primary-dark: #3d8d71;
+  --ifm-color-primary-darker: #388267;
+  --ifm-color-primary-darkest: #2c6953;
+  --ifm-color-primary-light: #5bb99d;
+  --ifm-color-primary-lighter: #67c3a8;
+  --ifm-color-primary-lightest: #80d1bd;
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom styling for the homepage */
+.hero--primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.button--secondary {
+  background: #ffffff;
+  color: #2e8555;
+  border: 2px solid #ffffff;
+}
+
+.button--secondary:hover {
+  background: #f8f9fa;
+  color: #29784c;
+}
+
+/* Custom styling for features */
+.features {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+html[data-theme='dark'] .features {
+  background-color: #1a1a1a;
+}
+
+/* Custom styling for navigation */
+.navbar__title {
+  font-weight: bold;
+}
+
+html[data-theme='dark'] .navbar {
+  background-color: #242526;
+}
+
+/* Custom styling for AI Tutor page */
+.tutor-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.tutor-page .container {
+  width: 100%;
+}
+
+/* Override chat container styles for dark mode */
+html[data-theme='dark'] .ai-tutor-container {
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+}
+
+html[data-theme='dark'] .chat-header {
+  background-color: #333;
+  color: white;
+}
+
+html[data-theme='dark'] .chat-messages {
+  background-color: #222;
+}
+
+html[data-theme='dark'] .user-message {
+  background-color: #2a4d69;
+  border: 1px solid #3a5f7d;
+}
+
+html[data-theme='dark'] .ai-message {
+  background-color: #333;
+  border: 1px solid #555;
+}

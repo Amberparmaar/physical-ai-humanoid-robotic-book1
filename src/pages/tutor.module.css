@@ -1,0 +1,231 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.tutorSection {
+  padding: 2rem 0;
+}
+
+.tutorContainer {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+}
+
+html[data-theme='dark'] .tutorContainer {
+  background: #242526;
+}
+
+.tutorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+html[data-theme='dark'] .tutorHeader {
+  border-bottom: 1px solid #444;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.connected {
+  color: #28a745;
+}
+
+.disconnected {
+  color: #dc3545;
+}
+
+.statusText {
+  font-size: 0.9rem;
+}
+
+.chatContainer {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  max-height: 50vh;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+.user {
+  background-color: #e3f2fd;
+  margin-left: auto;
+  text-align: right;
+}
+
+html[data-theme='dark'] .user {
+  background-color: #1a2332;
+}
+
+.bot {
+  background-color: #f8f9fa;
+  margin-right: auto;
+}
+
+html[data-theme='dark'] .bot {
+  background-color: #333;
+}
+
+.system {
+  background-color: #fff3cd;
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+}
+
+html[data-theme='dark'] .system {
+  background-color: #3a2e10;
+}
+
+.error {
+  background-color: #f8d7da;
+}
+
+html[data-theme='dark'] .error {
+  background-color: #521c1f;
+}
+
+.messageContent {
+  line-height: 1.5;
+}
+
+.typingIndicator {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.typingIndicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #6c757d;
+  display: inline-block;
+  animation: typing 1s infinite;
+}
+
+.typingIndicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typingIndicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.inputForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.inputField {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+html[data-theme='dark'] .inputField {
+  background-color: #333;
+  border-color: #555;
+  color: white;
+}
+
+.inputField:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.submitButton {
+  min-width: 80px;
+}
+
+.clearButton {
+  margin-left: 1rem;
+}
+
+.tutorInfo {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+html[data-theme='dark'] .tutorInfo {
+  border-top: 1px solid #444;
+}
+
+.tutorInfo ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.tutorInfo li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 996px) {
+  .tutorContainer {
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .inputForm {
+    flex-direction: column;
+  }
+  
+  .inputField {
+    min-height: 100px;
+  }
+  
+  .tutorHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .clearButton {
+    margin-left: 0;
+  }
+  
+  .message {
+    max-width: 90%;
+  }
+}
