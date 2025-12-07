@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkphysical_ai_humanoid_robotics=globalThis.webpackChunkphysical_ai_humanoid_robotics||[]).push([[6416],{4868:o=>{o.exports=JSON.parse('{"permalink":"/physical-ai-humanoid-robotic-book1/ur/blog/tags/introduction","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
