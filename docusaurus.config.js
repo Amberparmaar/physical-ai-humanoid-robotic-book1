@@ -11,14 +11,14 @@ const config = {
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
-  url: 'http://localhost:3000',
+  url: 'https://amberparmaar.github.io',
   // Set the /<base>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<org-name>/'
-  baseUrl: '/',
+  baseUrl: '/physical-ai-humanoid-robotic-book1/',
 
   // GitHub pages deployment config.
-  organizationName: 'physical-ai', // Usually your GitHub org/user name.
-  projectName: 'physical-ai-humanoid-robotics', // Usually your repo name.
+  organizationName: 'amberparmaar', // Usually your GitHub org/user name.
+  projectName: 'physical-ai-humanoid-robotic-book1', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -41,14 +41,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/physical-ai/physical-ai-humanoid-robotics/edit/main/',
+            'https://github.com/Amberparmaar/physical-ai-humanoid-robotic-book1/edit/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/physical-ai/physical-ai-humanoid-robotics/edit/main/',
+            'https://github.com/Amberparmaar/physical-ai-humanoid-robotic-book1/edit/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -96,7 +96,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/physical-ai/physical-ai-humanoid-robotics',
+            href: 'https://github.com/Amberparmaar/physical-ai-humanoid-robotic-book1',
             label: 'GitHub',
             position: 'right',
           },
@@ -156,12 +156,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/physical-ai/physical-ai-humanoid-robotics',
+                href: 'https://github.com/Amberparmaar/physical-ai-humanoid-robotic-book1',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Course. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
