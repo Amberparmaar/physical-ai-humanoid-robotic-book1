@@ -14,7 +14,7 @@ const config = {
   url: 'https://amberparmaar.github.io',
   // Set the /<base>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<org-name>/'
-  baseUrl: '/physical-ai-humanoid-robotic-book1/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'amberparmaar', // Usually your GitHub org/user name.
