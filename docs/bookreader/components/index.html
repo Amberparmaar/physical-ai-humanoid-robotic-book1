@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-bookreader/components" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Component Documentation - BookReader with Urdu Translation | Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://amberparmaar.github.io/physical-ai-humanoid-robotic-book1/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://amberparmaar.github.io/physical-ai-humanoid-robotic-book1/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://amberparmaar.github.io/physical-ai-humanoid-robotic-book1/docs/bookreader/components"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Component Documentation - BookReader with Urdu Translation | Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="This document provides detailed information about the React components used in the BookReader UI with Urdu Translation feature."><meta data-rh="true" property="og:description" content="This document provides detailed information about the React components used in the BookReader UI with Urdu Translation feature."><link data-rh="true" rel="icon" href="/physical-ai-humanoid-robotic-book1/img/logo.png"><link data-rh="true" rel="canonical" href="https://amberparmaar.github.io/physical-ai-humanoid-robotic-book1/docs/bookreader/components"><link data-rh="true" rel="alternate" href="https://amberparmaar.github.io/physical-ai-humanoid-robotic-book1/docs/bookreader/components" hreflang="en"><link data-rh="true" rel="alternate" href="https://amberparmaar.github.io/physical-ai-humanoid-robotic-book1/ur/docs/bookreader/components" hreflang="ur"><link data-rh="true" rel="alternate" href="https://amberparmaar.github.io/physical-ai-humanoid-robotic-book1/docs/bookreader/components" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/physical-ai-humanoid-robotic-book1/blog/rss.xml" title="Physical AI &amp; Humanoid Robotics RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/physical-ai-humanoid-robotic-book1/blog/atom.xml" title="Physical AI &amp; Humanoid Robotics Atom Feed"><link rel="stylesheet" href="/physical-ai-humanoid-robotic-book1/assets/css/styles.85f6ae26.css">
+<script src="/physical-ai-humanoid-robotic-book1/assets/js/runtime~main.43d6fe67.js" defer="defer"></script>
+<script src="/physical-ai-humanoid-robotic-book1/assets/js/main.40b18ffe.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/physical-ai-humanoid-robotic-book1/"><div class="navbar__logo"><img src="/physical-ai-humanoid-robotic-book1/img/logo.png" alt="Physical AI &amp; Robotics Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/physical-ai-humanoid-robotic-book1/img/logo.png" alt="Physical AI &amp; Robotics Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a class="navbar__item navbar__link" href="/physical-ai-humanoid-robotic-book1/docs/intro">Course Textbook<!-- --></a><a class="navbar__item navbar__link" href="/physical-ai-humanoid-robotic-book1/courses">Course Modules<!-- --></a><a class="navbar__item navbar__link" href="/physical-ai-humanoid-robotic-book1/blog">Blog<!-- --></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Amberparmaar/physical-ai-humanoid-robotic-book1" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<!-- --><svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page<!-- --></button></div><div class="theme-doc-markdown markdown"><header><h1>Component Documentation - BookReader with Urdu Translation</h1></header>
+<!-- --><p>This document provides detailed information about the React components used in the BookReader UI with Urdu Translation feature.</p>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="component-hierarchy">Component Hierarchy<!-- --><a href="#component-hierarchy" class="hash-link" aria-label="Direct link to Component Hierarchy" title="Direct link to Component Hierarchy" translate="no">​</a></h2>
+<!-- --><div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">App</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── ThemeProvider</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── Header</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── Main Content Area</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── LibraryPage (when browsing books)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   ├── ReaderPage (when reading)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   │   └── SettingsPage (when viewing settings)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   └── Footer</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── Global Modals (like TranslationPanel)</span><br></span></code></pre></div></div>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="core-components">Core Components<!-- --><a href="#core-components" class="hash-link" aria-label="Direct link to Core Components" title="Direct link to Core Components" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="apptsx">App.tsx<!-- --><a href="#apptsx" class="hash-link" aria-label="Direct link to App.tsx" title="Direct link to App.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/App.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Main application component that sets up routing and wraps the entire application with the ThemeProvider.<!-- --></p>
+<!-- --><p><strong>Props</strong>: None
+<!-- --><strong>State</strong>: None
+<!-- --><strong>Contexts Used</strong>: ThemeProvider<!-- --></p>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="themeprovidertsx">ThemeProvider.tsx<!-- --><a href="#themeprovidertsx" class="hash-link" aria-label="Direct link to ThemeProvider.tsx" title="Direct link to ThemeProvider.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/UI/ThemeProvider.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Provides theme context (light/dark mode, font size, user preferences) to all child components.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>children</code>: ReactNode - Child components to wrap<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>State</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>theme</code>: &#x27;light&#x27; | &#x27;dark&#x27; - Current theme<!-- --></li>
+<!-- --><li class=""><code>currentPreferences</code>: UserPreferences | null - Current user preferences<!-- --></li>
+<!-- --><li class=""><code>fontSize</code>: number - Current font size<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Context Value</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>theme</code>: Current theme<!-- --></li>
+<!-- --><li class=""><code>toggleTheme</code>: Function to toggle theme<!-- --></li>
+<!-- --><li class=""><code>currentPreferences</code>: Current user preferences<!-- --></li>
+<!-- --><li class=""><code>updatePreferences</code>: Function to update preferences<!-- --></li>
+<!-- --><li class=""><code>fontSize</code>: Current font size<!-- --></li>
+<!-- --><li class=""><code>setFontSize</code>: Function to set font size<!-- --></li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reader-components">Reader Components<!-- --><a href="#reader-components" class="hash-link" aria-label="Direct link to Reader Components" title="Direct link to Reader Components" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="readingareatsx">ReadingArea.tsx<!-- --><a href="#readingareatsx" class="hash-link" aria-label="Direct link to ReadingArea.tsx" title="Direct link to ReadingArea.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/Reader/ReadingArea.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Main component for displaying book content with paragraph selection functionality.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>content</code>: string - The book content to display<!-- --></li>
+<!-- --><li class=""><code>paragraphs</code>: Paragraph[] | undefined - Optional array of paragraphs if available<!-- --></li>
+<!-- --><li class=""><code>currentParagraphIndex</code>: number - Index of the currently selected paragraph<!-- --></li>
+<!-- --><li class=""><code>onParagraphSelect</code>: Function - Callback when a paragraph is selected<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>State</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>selectedParagraph</code>: number | null - Currently selected paragraph index<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Displays content with appropriate typography</li>
+<!-- --><li class="">Enables paragraph selection</li>
+<!-- --><li class="">Supports language preference settings (English, Urdu, or both)</li>
+<!-- --><li class="">Responsive to theme and font size changes</li>
+<!-- --><li class="">Performance optimized for long content</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="translationpaneltsx">TranslationPanel.tsx<!-- --><a href="#translationpaneltsx" class="hash-link" aria-label="Direct link to TranslationPanel.tsx" title="Direct link to TranslationPanel.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/Reader/TranslationPanel.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Modal panel that displays the Urdu translation of selected text.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>isVisible</code>: boolean - Whether the panel should be displayed<!-- --></li>
+<!-- --><li class=""><code>originalText</code>: string - The original English text<!-- --></li>
+<!-- --><li class=""><code>translation</code>: string - The Urdu translation<!-- --></li>
+<!-- --><li class=""><code>displayMode</code>: &#x27;side_by_side&#x27; | &#x27;toggle&#x27; - How to display the languages<!-- --></li>
+<!-- --><li class=""><code>onClose</code>: Function - Callback when the panel is closed<!-- --></li>
+<!-- --><li class=""><code>onModeChange</code>: Function | undefined - Callback when display mode changes<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Modal display with overlay</li>
+<!-- --><li class="">Side-by-side or toggle view for languages</li>
+<!-- --><li class="">Right-to-left text rendering for Urdu</li>
+<!-- --><li class="">Mode switching capability</li>
+<!-- --><li class="">Responsive design</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="floatingtranslationbuttontsx">FloatingTranslationButton.tsx<!-- --><a href="#floatingtranslationbuttontsx" class="hash-link" aria-label="Direct link to FloatingTranslationButton.tsx" title="Direct link to FloatingTranslationButton.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/Reader/FloatingTranslationButton.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Floating button that appears when text is selected, allowing users to translate the selected text.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>isVisible</code>: boolean - Whether the button should be displayed<!-- --></li>
+<!-- --><li class=""><code>onClick</code>: Function - Callback when the button is clicked<!-- --></li>
+<!-- --><li class=""><code>selectedText</code>: string | undefined - The text currently selected<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Fixed positioning in the bottom-right corner</li>
+<!-- --><li class="">Visible only when text is selected and panel is closed</li>
+<!-- --><li class="">Accessible via keyboard navigation</li>
+<!-- --><li class="">Smooth animations</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="languagetoggletsx">LanguageToggle.tsx<!-- --><a href="#languagetoggletsx" class="hash-link" aria-label="Direct link to LanguageToggle.tsx" title="Direct link to LanguageToggle.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/Reader/LanguageToggle.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Component to toggle between English and Urdu views.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>className</code>: string - Additional CSS classes<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Cycles through language display modes (English, Urdu, Both)</li>
+<!-- --><li class="">Updates the current language preference</li>
+<!-- --><li class="">Accessible button with appropriate labels</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="layout-components">Layout Components<!-- --><a href="#layout-components" class="hash-link" aria-label="Direct link to Layout Components" title="Direct link to Layout Components" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="settingspaneltsx">SettingsPanel.tsx<!-- --><a href="#settingspaneltsx" class="hash-link" aria-label="Direct link to SettingsPanel.tsx" title="Direct link to SettingsPanel.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/Layout/SettingsPanel.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Modal panel for adjusting user preferences.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>isVisible</code>: boolean - Whether the panel should be displayed<!-- --></li>
+<!-- --><li class=""><code>onClose</code>: Function - Callback when the panel is closed<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Theme selection (light/dark)</li>
+<!-- --><li class="">Font size slider</li>
+<!-- --><li class="">Language preference selection</li>
+<!-- --><li class="">Form for user settings</li>
+<!-- --><li class="">Responsive design</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-components">Book Components<!-- --><a href="#book-components" class="hash-link" aria-label="Direct link to Book Components" title="Direct link to Book Components" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="booklisttsx">BookList.tsx<!-- --><a href="#booklisttsx" class="hash-link" aria-label="Direct link to BookList.tsx" title="Direct link to BookList.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/Books/BookList.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Lists available books with search and filtering capabilities.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>onBookSelect</code>: Function - Callback when a book is selected<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>State</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>books</code>: Book[] - List of available books<!-- --></li>
+<!-- --><li class=""><code>loading</code>: boolean - Whether books are loading<!-- --></li>
+<!-- --><li class=""><code>error</code>: string | null - Error message if loading failed<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Fetches books from the API</li>
+<!-- --><li class="">Displays books in a responsive grid</li>
+<!-- --><li class="">Handles loading and error states</li>
+<!-- --><li class="">Calls back when a book is selected</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="bookcardtsx">BookCard.tsx<!-- --><a href="#bookcardtsx" class="hash-link" aria-label="Direct link to BookCard.tsx" title="Direct link to BookCard.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/Books/BookCard.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Displays information about a single book in an attractive card format.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>book</code>: Book - The book to display<!-- --></li>
+<!-- --><li class=""><code>onClick</code>: Function - Callback when the card is clicked<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Displays book title and author</li>
+<!-- --><li class="">Shows translation availability indicator</li>
+<!-- --><li class="">Character count information</li>
+<!-- --><li class="">Hover effects</li>
+<!-- --><li class="">Responsive design</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ui-components">UI Components<!-- --><a href="#ui-components" class="hash-link" aria-label="Direct link to UI Components" title="Direct link to UI Components" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="buttontsx">Button.tsx<!-- --><a href="#buttontsx" class="hash-link" aria-label="Direct link to Button.tsx" title="Direct link to Button.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/UI/Button.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Reusable button component with different variants and sizes.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>children</code>: ReactNode - Button content<!-- --></li>
+<!-- --><li class=""><code>onClick</code>: Function - Click handler<!-- --></li>
+<!-- --><li class=""><code>variant</code>: &#x27;primary&#x27; | &#x27;secondary&#x27; | &#x27;outline&#x27; - Button style variant<!-- --></li>
+<!-- --><li class=""><code>size</code>: &#x27;sm&#x27; | &#x27;md&#x27; | &#x27;lg&#x27; - Button size<!-- --></li>
+<!-- --><li class=""><code>className</code>: string - Additional CSS classes<!-- --></li>
+<!-- --><li class=""><code>disabled</code>: boolean - Whether the button is disabled<!-- --></li>
+<!-- --><li class=""><code>type</code>: &#x27;button&#x27; | &#x27;submit&#x27; | &#x27;reset&#x27; - Button type<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Multiple style variants</li>
+<!-- --><li class="">Different size options</li>
+<!-- --><li class="">Disabled state handling</li>
+<!-- --><li class="">Accessible attributes</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="slidertsx">Slider.tsx<!-- --><a href="#slidertsx" class="hash-link" aria-label="Direct link to Slider.tsx" title="Direct link to Slider.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/components/UI/Slider.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Reusable range slider component, primarily used for font size adjustment.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>value</code>: number - Current value of the slider<!-- --></li>
+<!-- --><li class=""><code>min</code>: number - Minimum value<!-- --></li>
+<!-- --><li class=""><code>max</code>: number - Maximum value<!-- --></li>
+<!-- --><li class=""><code>step</code>: number - Step increment (default 1)<!-- --></li>
+<!-- --><li class=""><code>onChange</code>: Function - Callback when value changes<!-- --></li>
+<!-- --><li class=""><code>label</code>: string - Label for the slider<!-- --></li>
+<!-- --><li class=""><code>className</code>: string - Additional CSS classes<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Customizable min/max values</li>
+<!-- --><li class="">Step controls</li>
+<!-- --><li class="">Value display</li>
+<!-- --><li class="">Accessible labels</li>
+<!-- --><li class="">Responsive design</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="page-components">Page Components<!-- --><a href="#page-components" class="hash-link" aria-label="Direct link to Page Components" title="Direct link to Page Components" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="readerpagetsx">ReaderPage.tsx<!-- --><a href="#readerpagetsx" class="hash-link" aria-label="Direct link to ReaderPage.tsx" title="Direct link to ReaderPage.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/pages/ReaderPage.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Main page for the reading experience, combines all reading components.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>bookId</code>: string - ID of the book to display<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>State</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>book</code>: Book | null - The loaded book<!-- --></li>
+<!-- --><li class=""><code>selectedText</code>: string - Currently selected text<!-- --></li>
+<!-- --><li class=""><code>showTranslationPanel</code>: boolean - Whether to show translation panel<!-- --></li>
+<!-- --><li class=""><code>displayMode</code>: &#x27;side_by_side&#x27; | &#x27;toggle&#x27; - Language display mode<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Loads book content by ID</li>
+<!-- --><li class="">Manages translation panel state</li>
+<!-- --><li class="">Handles paragraph selection</li>
+<!-- --><li class="">Coordinates all reading components</li>
+<!-- --><li class="">Implements translation functionality</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="librarypagetsx">LibraryPage.tsx<!-- --><a href="#librarypagetsx" class="hash-link" aria-label="Direct link to LibraryPage.tsx" title="Direct link to LibraryPage.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/pages/LibraryPage.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Page for browsing available books.<!-- --></p>
+<!-- --><p><strong>Props</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>onBookSelect</code>: Function - Callback when a book is selected<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Displays book list</li>
+<!-- --><li class="">Handles book selection</li>
+<!-- --><li class="">Provides navigation to reader page</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="settingspagetsx">SettingsPage.tsx<!-- --><a href="#settingspagetsx" class="hash-link" aria-label="Direct link to SettingsPage.tsx" title="Direct link to SettingsPage.tsx" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/pages/SettingsPage.tsx</code></p>
+<!-- --><p><strong>Purpose</strong>: Page for managing user settings.<!-- --></p>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Access to settings panel</li>
+<!-- --><li class="">Additional account settings</li>
+<!-- --><li class="">About information</li>
+<!-- --><li class="">Consistent with app layout</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="hooks">Hooks<!-- --><a href="#hooks" class="hash-link" aria-label="Direct link to Hooks" title="Direct link to Hooks" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="usebookcontentts">useBookContent.ts<!-- --><a href="#usebookcontentts" class="hash-link" aria-label="Direct link to useBookContent.ts" title="Direct link to useBookContent.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/hooks/useBookContent.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Custom hook to manage loading and state of book content.<!-- --></p>
+<!-- --><p><strong>Parameters</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>bookId</code>: string - ID of the book to load<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Returns</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>book</code>: Book | null - Loaded book<!-- --></li>
+<!-- --><li class=""><code>loading</code>: boolean - Loading state<!-- --></li>
+<!-- --><li class=""><code>error</code>: string | null - Error state<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Fetches book content from API</li>
+<!-- --><li class="">Manages loading and error states</li>
+<!-- --><li class="">Handles book caching</li>
+<!-- --><li class="">Implements retry logic</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="usetranslationts">useTranslation.ts<!-- --><a href="#usetranslationts" class="hash-link" aria-label="Direct link to useTranslation.ts" title="Direct link to useTranslation.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/hooks/useTranslation.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Custom hook to manage translation functionality.<!-- --></p>
+<!-- --><p><strong>Returns</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>translation</code>: string - Translated text<!-- --></li>
+<!-- --><li class=""><code>loading</code>: boolean - Translation loading state<!-- --></li>
+<!-- --><li class=""><code>error</code>: string | null - Error state<!-- --></li>
+<!-- --><li class=""><code>translateText</code>: Function - Function to translate text<!-- --></li>
+<!-- --><li class=""><code>resetTranslation</code>: Function - Function to reset translation<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Translates text via API</li>
+<!-- --><li class="">Manages translation states</li>
+<!-- --><li class="">Provides error handling</li>
+<!-- --><li class="">Implements caching</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="useuserpreferencests">useUserPreferences.ts<!-- --><a href="#useuserpreferencests" class="hash-link" aria-label="Direct link to useUserPreferences.ts" title="Direct link to useUserPreferences.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/hooks/useUserPreferences.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Custom hook to manage user preferences.<!-- --></p>
+<!-- --><p><strong>Returns</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>userPreferences</code>: UserPreferences | null - Current preferences<!-- --></li>
+<!-- --><li class=""><code>loading</code>: boolean - Loading state<!-- --></li>
+<!-- --><li class=""><code>error</code>: string | null - Error state<!-- --></li>
+<!-- --><li class=""><code>updatePreferences</code>: Function - Function to update preferences<!-- --></li>
+<!-- --></ul>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Loads preferences from storage/API</li>
+<!-- --><li class="">Manages preference states</li>
+<!-- --><li class="">Updates preferences and syncs to storage/API</li>
+<!-- --><li class="">Provides error handling</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="services">Services<!-- --><a href="#services" class="hash-link" aria-label="Direct link to Services" title="Direct link to Services" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="apiclientts">apiClient.ts<!-- --><a href="#apiclientts" class="hash-link" aria-label="Direct link to apiClient.ts" title="Direct link to apiClient.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/services/apiClient.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Generic API client for making HTTP requests.<!-- --></p>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Configurable base URL</li>
+<!-- --><li class="">Error handling</li>
+<!-- --><li class="">Request/response interceptors</li>
+<!-- --><li class="">Support for different HTTP methods</li>
+<!-- --></ul>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="bookservicets">bookService.ts<!-- --><a href="#bookservicets" class="hash-link" aria-label="Direct link to bookService.ts" title="Direct link to bookService.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/services/bookService.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Service for book-related API operations.<!-- --></p>
+<!-- --><p><strong>Functions</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>getBooks()</code>: Get list of books<!-- --></li>
+<!-- --><li class=""><code>getBookContent(bookId)</code>: Get specific book content<!-- --></li>
+<!-- --><li class=""><code>uploadBook(bookData)</code>: Upload a new book<!-- --></li>
+<!-- --><li class=""><code>getUserPreferences()</code>: Get user preferences from API<!-- --></li>
+<!-- --><li class=""><code>updateUserPreferences(preferences)</code>: Update user preferences via API<!-- --></li>
+<!-- --></ul>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="translationservicets">translationService.ts<!-- --><a href="#translationservicets" class="hash-link" aria-label="Direct link to translationService.ts" title="Direct link to translationService.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/services/translationService.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Service for translation-related operations.<!-- --></p>
+<!-- --><p><strong>Functions</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>getTranslation(text, bookId)</code>: Get Urdu translation for text<!-- --></li>
+<!-- --></ul>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="storageservicets">storageService.ts<!-- --><a href="#storageservicets" class="hash-link" aria-label="Direct link to storageService.ts" title="Direct link to storageService.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/services/storageService.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Service for local storage operations, with fallback to IndexedDB.<!-- --></p>
+<!-- --><p><strong>Functions</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class=""><code>saveUserPreferences(preferences)</code>: Save user preferences to storage<!-- --></li>
+<!-- --><li class=""><code>getUserPreferences()</code>: Get user preferences from storage<!-- --></li>
+<!-- --><li class=""><code>saveBookContent(bookId, content)</code>: Save book content to storage<!-- --></li>
+<!-- --><li class=""><code>getBookContent(bookId)</code>: Get book content from storage<!-- --></li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="models">Models<!-- --><a href="#models" class="hash-link" aria-label="Direct link to Models" title="Direct link to Models" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="bookts">Book.ts<!-- --><a href="#bookts" class="hash-link" aria-label="Direct link to Book.ts" title="Direct link to Book.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/models/Book.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Type definitions for Book entities.<!-- --></p>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="paragraphts">Paragraph.ts<!-- --><a href="#paragraphts" class="hash-link" aria-label="Direct link to Paragraph.ts" title="Direct link to Paragraph.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/models/Paragraph.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Type definitions for Paragraph entities.<!-- --></p>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="userpreferencests">UserPreferences.ts<!-- --><a href="#userpreferencests" class="hash-link" aria-label="Direct link to UserPreferences.ts" title="Direct link to UserPreferences.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/models/UserPreferences.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Type definitions for UserPreferences entities.<!-- --></p>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="translationts">Translation.ts<!-- --><a href="#translationts" class="hash-link" aria-label="Direct link to Translation.ts" title="Direct link to Translation.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/models/Translation.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Type definitions for Translation entities.<!-- --></p>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="styling">Styling<!-- --><a href="#styling" class="hash-link" aria-label="Direct link to Styling" title="Direct link to Styling" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="typography-css">Typography CSS<!-- --><a href="#typography-css" class="hash-link" aria-label="Direct link to Typography CSS" title="Direct link to Typography CSS" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/styles/typography.css</code></p>
+<!-- --><p><strong>Purpose</strong>: Typography styles optimized for reading experience.<!-- --></p>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Appropriate font families for English and Urdu</li>
+<!-- --><li class="">Line height and spacing for readability</li>
+<!-- --><li class="">Responsive font sizing</li>
+<!-- --><li class="">Dark mode considerations</li>
+<!-- --></ul>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="global-css">Global CSS<!-- --><a href="#global-css" class="hash-link" aria-label="Direct link to Global CSS" title="Direct link to Global CSS" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/styles/globals.css</code></p>
+<!-- --><p><strong>Purpose</strong>: Global styles for the application.<!-- --></p>
+<!-- --><p><strong>Features</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">Reset/normalize styles</li>
+<!-- --><li class="">Base element styles</li>
+<!-- --><li class="">Scrollbar customization</li>
+<!-- --><li class="">Dark mode classes</li>
+<!-- --><li class="">Responsive utility classes</li>
+<!-- --></ul>
+<!-- --><hr>
+<!-- --><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="type-definitions">Type Definitions<!-- --><a href="#type-definitions" class="hash-link" aria-label="Direct link to Type Definitions" title="Direct link to Type Definitions" translate="no">​</a></h2>
+<!-- --><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="indexts">index.ts<!-- --><a href="#indexts" class="hash-link" aria-label="Direct link to index.ts" title="Direct link to index.ts" translate="no">​</a></h3>
+<!-- --><p><strong>Location</strong>: <!-- --><code>frontend/src/types/index.ts</code></p>
+<!-- --><p><strong>Purpose</strong>: Centralized type definitions used throughout the application.<!-- --></p>
+<!-- --><p><strong>Types Defined</strong>:<!-- --></p>
+<!-- --><ul>
+<!-- --><li class="">BookFormat</li>
+<!-- --><li class="">Theme</li>
+<!-- --><li class="">LanguagePreference</li>
+<!-- --><li class="">ReadingMode</li>
+<!-- --><li class="">TranslationDisplayMode</li>
+<!-- --><li class=""><code>ApiResponse&lt;T&gt;</code></li>
+<!-- --><li class="">ApiError</li>
+<!-- --></ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/Amberparmaar/physical-ai-humanoid-robotic-book1/edit/main/docs/bookreader/components.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page<!-- --></a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#component-hierarchy" class="table-of-contents__link toc-highlight">Component Hierarchy</a></li><li><a href="#core-components" class="table-of-contents__link toc-highlight">Core Components</a><ul><li><a href="#apptsx" class="table-of-contents__link toc-highlight">App.tsx</a></li><li><a href="#themeprovidertsx" class="table-of-contents__link toc-highlight">ThemeProvider.tsx</a></li></ul></li><li><a href="#reader-components" class="table-of-contents__link toc-highlight">Reader Components</a><ul><li><a href="#readingareatsx" class="table-of-contents__link toc-highlight">ReadingArea.tsx</a></li><li><a href="#translationpaneltsx" class="table-of-contents__link toc-highlight">TranslationPanel.tsx</a></li><li><a href="#floatingtranslationbuttontsx" class="table-of-contents__link toc-highlight">FloatingTranslationButton.tsx</a></li><li><a href="#languagetoggletsx" class="table-of-contents__link toc-highlight">LanguageToggle.tsx</a></li></ul></li><li><a href="#layout-components" class="table-of-contents__link toc-highlight">Layout Components</a><ul><li><a href="#settingspaneltsx" class="table-of-contents__link toc-highlight">SettingsPanel.tsx</a></li></ul></li><li><a href="#book-components" class="table-of-contents__link toc-highlight">Book Components</a><ul><li><a href="#booklisttsx" class="table-of-contents__link toc-highlight">BookList.tsx</a></li><li><a href="#bookcardtsx" class="table-of-contents__link toc-highlight">BookCard.tsx</a></li></ul></li><li><a href="#ui-components" class="table-of-contents__link toc-highlight">UI Components</a><ul><li><a href="#buttontsx" class="table-of-contents__link toc-highlight">Button.tsx</a></li><li><a href="#slidertsx" class="table-of-contents__link toc-highlight">Slider.tsx</a></li></ul></li><li><a href="#page-components" class="table-of-contents__link toc-highlight">Page Components</a><ul><li><a href="#readerpagetsx" class="table-of-contents__link toc-highlight">ReaderPage.tsx</a></li><li><a href="#librarypagetsx" class="table-of-contents__link toc-highlight">LibraryPage.tsx</a></li><li><a href="#settingspagetsx" class="table-of-contents__link toc-highlight">SettingsPage.tsx</a></li></ul></li><li><a href="#hooks" class="table-of-contents__link toc-highlight">Hooks</a><ul><li><a href="#usebookcontentts" class="table-of-contents__link toc-highlight">useBookContent.ts</a></li><li><a href="#usetranslationts" class="table-of-contents__link toc-highlight">useTranslation.ts</a></li><li><a href="#useuserpreferencests" class="table-of-contents__link toc-highlight">useUserPreferences.ts</a></li></ul></li><li><a href="#services" class="table-of-contents__link toc-highlight">Services</a><ul><li><a href="#apiclientts" class="table-of-contents__link toc-highlight">apiClient.ts</a></li><li><a href="#bookservicets" class="table-of-contents__link toc-highlight">bookService.ts</a></li><li><a href="#translationservicets" class="table-of-contents__link toc-highlight">translationService.ts</a></li><li><a href="#storageservicets" class="table-of-contents__link toc-highlight">storageService.ts</a></li></ul></li><li><a href="#models" class="table-of-contents__link toc-highlight">Models</a><ul><li><a href="#bookts" class="table-of-contents__link toc-highlight">Book.ts</a></li><li><a href="#paragraphts" class="table-of-contents__link toc-highlight">Paragraph.ts</a></li><li><a href="#userpreferencests" class="table-of-contents__link toc-highlight">UserPreferences.ts</a></li><li><a href="#translationts" class="table-of-contents__link toc-highlight">Translation.ts</a></li></ul></li><li><a href="#styling" class="table-of-contents__link toc-highlight">Styling</a><ul><li><a href="#typography-css" class="table-of-contents__link toc-highlight">Typography CSS</a></li><li><a href="#global-css" class="table-of-contents__link toc-highlight">Global CSS</a></li></ul></li><li><a href="#type-definitions" class="table-of-contents__link toc-highlight">Type Definitions</a><ul><li><a href="#indexts" class="table-of-contents__link toc-highlight">index.ts</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Course Content</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotic-book1/docs/intro">Course Introduction<!-- --></a></li><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotic-book1/docs/ros2/introduction">ROS2 Fundamentals<!-- --></a></li><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotic-book1/docs/gazebo/introduction">Gazebo Simulation<!-- --></a></li><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotic-book1/docs/isaac/introduction">NVIDIA Isaac Platform<!-- --></a></li><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotic-book1/docs/vla/introduction">VLA Models<!-- --></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Learning Tools</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/physical-ai-humanoid-robotic-book1/courses">Course Modules<!-- --></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<!-- --><svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/Amberparmaar/physical-ai-humanoid-robotic-book1" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<!-- --><svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.</div></div></div></footer><div class="floating-chatbot"><button class="chatbot-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></button></div></div>
+</body>
+</html>

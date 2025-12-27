@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkphysical_ai_humanoid_robotics=globalThis.webpackChunkphysical_ai_humanoid_robotics||[]).push([[1627],{5874:a=>{a.exports=JSON.parse('{"label":"education","permalink":"/physical-ai-humanoid-robotic-book1/ur/blog/tags/education","allTagsPath":"/physical-ai-humanoid-robotic-book1/ur/blog/tags","count":1}')}}]);
