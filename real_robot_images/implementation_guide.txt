@@ -1,0 +1,45 @@
+Real Robot Images Implementation Guide
+
+Current Status:
+- You have robot-themed SVG images in the static/img directory
+- The ai.svg file already contains a robot design as created earlier
+- You have theme colors #BBC863 (green) and #000000 (black) applied throughout your site
+
+To add real robot images (actual photographs or detailed digital art):
+
+1. Download real robot images from:
+   - Free stock photo sites: Unsplash, Pexels, Pixabay
+   - Robot photography from robotics competitions
+   - AI-generated robot images (using tools like DALL-E, Midjourney)
+   - Custom robot illustrations
+
+2. Recommended dimensions for your current setup:
+   - logo.png: 200x200 pixels (or keep the current dimensions)
+   - ai.svg: Convert to 200x200 JPG if you want to replace it
+   - favicon.svg: 16x16 or 32x32 pixels (or convert to .ico format)
+   - robot.svg: 200x200 pixels as JPG
+   - tech-stack.svg: 200x200 pixels as JPG
+
+3. How to add the images to static/img directory:
+   - Open File Explorer
+   - Navigate to C:\Users\hp\Desktop\physical-ai-humanoid-robotics\static\img\
+   - Copy and paste your downloaded robot images into this folder
+   - Rename them appropriately (ai.jpg, favicon.jpg, logo.jpg, etc.)
+   - Update docusaurus.config.js to reference the new file names
+
+4. If you want to replace the SVG files with JPG versions:
+   - Add the JPG files to the static/img directory
+   - Update references in your config and any docs that reference these images
+   - You can keep both SVG and JPG files if you want to switch back
+
+5. For best results with your theme colors (#BBC863 and #000000):
+   - Choose robot images with colors that complement your theme
+   - Consider image editing to adjust colors slightly to match your palette
+   - Use images with good contrast against your site's background
+
+6. After adding images:
+   - Test your site with 'npm run start' to ensure images display correctly
+   - Verify all navigation elements still work with the new images
+   - Check both light and dark themes display the images properly
+
+Note: You already have robot-themed vector images (SVGs) which are clean and scalable. Real robot photos would add a different aesthetic to your site.

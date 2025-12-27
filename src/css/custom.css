@@ -6,105 +6,360 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6d;
-  --ifm-code-font-size: 95%;
+    --ifm-color-primary: #45B6FE;
+    --ifm-color-primary-dark: #1E88E5;
+    --ifm-color-primary-darker: #1976D2;
+    --ifm-color-primary-darkest: #0D47A1;
+    --ifm-color-primary-light: #7FCEF9;
+    --ifm-color-primary-lighter: #A8DDFA;
+    --ifm-color-primary-lightest: #D1EDFC;
+    --ifm-color-content: #000000;
+    --ifm-color-content-inverse: #ffffff;
+    --ifm-code-font-size: 95%;
+    --ifm-color-secondary: #000000; /* Black accent */
 }
 
 /* Dark theme override */
-html[data-theme='dark'] {
-  --ifm-color-primary: #4caf8b;
-  --ifm-color-primary-dark: #3d8d71;
-  --ifm-color-primary-darker: #388267;
-  --ifm-color-primary-darkest: #2c6953;
-  --ifm-color-primary-light: #5bb99d;
-  --ifm-color-primary-lighter: #67c3a8;
-  --ifm-color-primary-lightest: #80d1bd;
+html[data-theme="dark"] {
+    --ifm-color-primary: #7FCEF9;
+    --ifm-color-primary-dark: #45B6FE;
+    --ifm-color-primary-darker: #1E88E5;
+    --ifm-color-primary-darkest: #1976D2;
+    --ifm-color-primary-light: #A8DDFA;
+    --ifm-color-primary-lighter: #D1EDFC;
+    --ifm-color-primary-lightest: #F0F8FF;
+    --ifm-color-content: #ffffff;
+    --ifm-color-content-inverse: #000000;
+    --ifm-color-secondary: #ffffff; /* White accent in dark mode */
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Custom styling for text to ensure consistent black color */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+li,
+td,
+th {
+    color: var(--ifm-color-content);
 }
 
 /* Custom styling for the homepage */
 .hero--primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #45B6FE 0%, #000000 100%);
 }
 
 .button--secondary {
-  background: #ffffff;
-  color: #2e8555;
-  border: 2px solid #ffffff;
+    background: #ffffff;
+    color: #45B6FE;
+    border: 2px solid #45B6FE;
 }
 
 .button--secondary:hover {
-  background: #f8f9fa;
-  color: #29784c;
+    background: #45B6FE;
+    color: #000000;
 }
 
 /* Custom styling for features */
 .features {
-  padding: 4rem 0;
-  background-color: #f8f9fa;
+    padding: 4rem 0;
+    background-color: #f8f9fa;
 }
 
-html[data-theme='dark'] .features {
-  background-color: #1a1a1a;
+html[data-theme="dark"] .features {
+    background-color: #1a1a1a;
+}
+
+/* Use our theme colors for various elements */
+.hero__title {
+    color: #000000;
+}
+
+html[data-theme="dark"] .hero__title {
+    color: #45B6FE;
+}
+
+.button--primary {
+    background-color: #45B6FE;
+    border-color: #45B6FE;
+    color: #000000;
+}
+
+.button--primary:hover {
+    background-color: #000000;
+    border-color: #000000;
+    color: #45B6FE;
 }
 
 /* Custom styling for navigation */
 .navbar__title {
-  font-weight: bold;
+    font-weight: bold;
+    color: #000000;
 }
 
-html[data-theme='dark'] .navbar {
-  background-color: #242526;
+html[data-theme="dark"] .navbar {
+    background-color: #242526;
+}
+
+.navbar__link {
+    color: #000000;
+}
+
+html[data-theme="dark"] .navbar__link {
+    color: #45B6FE;
+}
+
+.navbar__link:hover {
+    color: #45B6FE;
+}
+
+html[data-theme="dark"] .navbar__link:hover {
+    color: #7FCEF9;
 }
 
 /* Custom styling for AI Tutor page */
 .tutor-page {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
 }
 
 .tutor-page .container {
-  width: 100%;
+    width: 100%;
 }
 
 /* Override chat container styles for dark mode */
-html[data-theme='dark'] .ai-tutor-container {
-  border: 1px solid #444;
-  background-color: #1a1a1a;
+html[data-theme="dark"] .ai-tutor-container {
+    border: 1px solid #444;
+    background-color: #1a1a1a;
 }
 
-html[data-theme='dark'] .chat-header {
-  background-color: #333;
-  color: white;
+html[data-theme="dark"] .chat-header {
+    background-color: #333;
+    color: white;
 }
 
-html[data-theme='dark'] .chat-messages {
-  background-color: #222;
+html[data-theme="dark"] .chat-messages {
+    background-color: #222;
 }
 
-html[data-theme='dark'] .user-message {
-  background-color: #2a4d69;
-  border: 1px solid #3a5f7d;
+html[data-theme="dark"] .user-message {
+    background-color: #2a4d69;
+    border: 1px solid #3a5f7d;
 }
 
-html[data-theme='dark'] .ai-message {
-  background-color: #333;
-  border: 1px solid #555;
+html[data-theme="dark"] .ai-message {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+/* Ensure good contrast for links */
+a {
+    color: #45B6FE;
+}
+
+a:hover {
+    color: #000000;
+}
+
+html[data-theme="dark"] a {
+    color: #45B6FE;
+}
+
+html[data-theme="dark"] a:hover {
+    color: #7FCEF9;
+}
+
+/* Ensure body text is readable */
+body {
+    color: #000000;
+}
+
+html[data-theme="dark"] body {
+    color: #ffffff;
+}
+
+/* Enhanced Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #45B6FE 0%, #000000 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 0;
+}
+
+.navbar__inner {
+    padding: 0 1rem;
+}
+
+.navbar__brand {
+    color: #000000;
+    font-weight: bold;
+}
+
+html[data-theme="dark"] .navbar__brand {
+    color: #ffffff;
+}
+
+.navbar__brand-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.navbar__items {
+    color: #000000;
+}
+
+html[data-theme="dark"] .navbar__items {
+    color: #ffffff;
+}
+
+.navbar__item {
+    margin: 0 0.8rem;
+}
+
+.navbar__link {
+    color: #000000;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+html[data-theme="dark"] .navbar__link {
+    color: #45B6FE;
+}
+
+.navbar__link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #45B6FE;
+}
+
+html[data-theme="dark"] .navbar__link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #7FCEF9;
+}
+
+.navbar__link--active {
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+html[data-theme="dark"] .navbar__link--active {
+    color: #45B6FE;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar__toggle {
+    color: #000000;
+}
+
+html[data-theme="dark"] .navbar__toggle {
+    color: #ffffff;
+}
+
+.navbar__logo {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+/* Mobile menu styles */
+.navbar-sidebar {
+    background: linear-gradient(135deg, #45B6FE 0%, #000000 100%);
+}
+
+.menu {
+    padding: 1rem 0;
+}
+
+.menu__link {
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .menu__link {
+    color: #42A5F5;
+}
+
+.menu__link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #BBDEFB;
+}
+
+html[data-theme="dark"] .menu__link:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #1E88E5;
+}
+
+.menu__link--active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+html[data-theme="dark"] .menu__link--active {
+    color: #42A5F5;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Override for themed image display */
+html[data-theme="light"]
+    .themedImage--light_node_modules-\@docusaurus-theme-classic-lib-theme-ThemedImage-styles-module {
+    display: hidden;
+}
+
+/* Custom footer styling to match the new theme */
+.footer {
+  background: #45B6FE !important;
+  color: #000000;
+}
+
+.footer__title {
+  color: #000000;
+}
+
+.footer__link-item {
+  color: #000000;
+  opacity: 0.8;
+}
+
+.footer__link-item:hover {
+  color: #000000;
+  opacity: 1;
+}
+
+.footer__copyright {
+  color: #000000;
+  opacity: 0.7;
+}
+
+/* Dark theme footer */
+html[data-theme="dark"] .footer {
+  background: #000000 !important;
+  color: #45B6FE;
+}
+
+html[data-theme="dark"] .footer__title {
+  color: #45B6FE;
+}
+
+html[data-theme="dark"] .footer__link-item {
+  color: #7FCEF9;
+}
+
+html[data-theme="dark"] .footer__link-item:hover {
+  color: #A8DDFA;
 }

@@ -5,7 +5,7 @@
   height: 80vh;
   max-width: 800px;
   margin: 0 auto;
-  border: 1px solid #ccc;
+  border: 1px solid #45B6FE;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -14,7 +14,7 @@
 
 .chat-header {
   padding: 1rem;
-  background-color: #2c3e50;
+  background: linear-gradient(135deg, #45B6FE 0%, #000000 100%);
   color: white;
   text-align: center;
 }
@@ -22,12 +22,14 @@
 .chat-header h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
+  color: white;
 }
 
 .chat-header p {
   margin: 0;
   font-size: 0.9rem;
   opacity: 0.8;
+  color: white;
 }
 
 .chat-messages {
@@ -37,7 +39,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: #fafafa;
+  background-color: white;
+  color: #000000;
 }
 
 .chat-messages::-webkit-scrollbar {
@@ -49,10 +52,30 @@
 }
 
 .chat-messages::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: #45B6FE;
   border-radius: 4px;
 }
 
 .chat-messages::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #1E88E5;
+}
+
+/* Update user and AI message styles to match the theme */
+.user-message {
+  background-color: #45B6FE;
+  color: black;
+  align-self: flex-end;
+  border-radius: 10px;
+  padding: 0.75rem;
+  max-width: 80%;
+}
+
+.ai-message {
+  background-color: #f0f8ff;
+  color: #000000;
+  align-self: flex-start;
+  border-radius: 10px;
+  padding: 0.75rem;
+  max-width: 80%;
+  border-left: 3px solid #45B6FE;
 }

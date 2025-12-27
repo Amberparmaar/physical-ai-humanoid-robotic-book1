@@ -1,7 +1,11 @@
 from typing import List, Dict, Optional
-from ..services.rag import rag_service
-from ..services.context7 import context7_service
-from ..config import settings
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from services.rag import rag_service
+from services.context7 import context7_service
+from config import settings
 import logging
 
 logger = logging.getLogger(__name__)

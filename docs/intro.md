@@ -39,8 +39,8 @@ The course is designed with multiple learning pathways:
 ### Integrated AI Tutor
 Access our AI tutor via the "AI Tutor" navigation link to get personalized assistance with course concepts, code explanations, and project guidance.
 
-### Robot Simulator
-Use our integrated simulation environment to practice robot control and test algorithms in a safe virtual environment. Access the simulator through the "Robot Simulator" link in the navigation.
+### Learning Tools
+Explore our learning tools accessible through the navigation menu to enhance your understanding of Physical AI and Humanoid Robotics concepts.
 
 ### Course Modules
 Each course module is designed as a self-contained learning unit with:

@@ -21,7 +21,8 @@
 }
 
 .tutorContainer {
-  background: #f8f9fa;
+  background: white;
+  border: 1px solid #45B6FE;
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -31,7 +32,8 @@
 }
 
 html[data-theme='dark'] .tutorContainer {
-  background: #242526;
+  background: #000000;
+  border-color: #45B6FE;
 }
 
 .tutorHeader {
@@ -40,11 +42,11 @@ html[data-theme='dark'] .tutorContainer {
   align-items: center;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #45B6FE;
 }
 
 html[data-theme='dark'] .tutorHeader {
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #45B6FE;
 }
 
 .statusIndicator {
@@ -80,22 +82,30 @@ html[data-theme='dark'] .tutorHeader {
 }
 
 .user {
-  background-color: #e3f2fd;
+  background-color: #45B6FE;
+  color: black;
   margin-left: auto;
   text-align: right;
+  border: 1px solid #1E88E5;
 }
 
 html[data-theme='dark'] .user {
-  background-color: #1a2332;
+  background-color: #1E88E5;
+  color: white;
 }
 
 .bot {
-  background-color: #f8f9fa;
+  background-color: #f0f8ff;
+  color: #000000;
   margin-right: auto;
+  border: 1px solid #45B6FE;
+  border-left: 3px solid #45B6FE;
 }
 
 html[data-theme='dark'] .bot {
-  background-color: #333;
+  background-color: #000000;
+  border-color: #45B6FE;
+  color: #45B6FE;
 }
 
 .system {
@@ -157,29 +167,73 @@ html[data-theme='dark'] .error {
 .inputField {
   flex: 1;
   padding: 0.75rem;
-  border: 1px solid #ced4da;
+  border: 1px solid #45B6FE;
   border-radius: 4px;
   font-size: 1rem;
 }
 
 html[data-theme='dark'] .inputField {
-  background-color: #333;
-  border-color: #555;
+  background-color: #000000;
+  border-color: #45B6FE;
   color: white;
 }
 
 .inputField:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+  border-color: #45B6FE;
+  box-shadow: 0 0 0 0.2rem rgba(69, 182, 254, 0.25);
 }
 
 .submitButton {
   min-width: 80px;
+  background-color: #45B6FE;
+  color: black;
+  border: 1px solid #45B6FE;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+}
+
+.submitButton:hover {
+  background-color: #1E88E5;
+  color: white;
+  border-color: #1E88E5;
 }
 
 .clearButton {
   margin-left: 1rem;
+  background-color: #f8f9fa;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+}
+
+.clearButton:hover {
+  background-color: #e9ecef;
+  color: #212529;
+  border-color: #adb5bd;
+}
+
+html[data-theme='dark'] .submitButton {
+  background-color: #1E88E5;
+  color: white;
+  border-color: #1E88E5;
+}
+
+html[data-theme='dark'] .submitButton:hover {
+  background-color: #45B6FE;
+  color: black;
+  border-color: #45B6FE;
+}
+
+html[data-theme='dark'] .clearButton {
+  background-color: #444;
+  color: white;
+  border-color: #555;
+}
+
+html[data-theme='dark'] .clearButton:hover {
+  background-color: #555;
 }
 
 .tutorInfo {

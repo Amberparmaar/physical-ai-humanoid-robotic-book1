@@ -3,15 +3,21 @@ from typing import Optional
 import jwt
 from passlib.context import CryptContext
 from datetime import datetime, timedelta
-from .. import models, schemas
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from models import User as UserModel
+from schemas import UserCreate
+from config import settings
 
 # Password hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-# JWT configuration
-SECRET_KEY = "your-secret-key-change-in-production"  # Should be in environment variables
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+# JWT configuration - using settings from config
+SECRET_KEY = settings.secret_key
+ALGORITHM = settings.algorithm
+ACCESS_TOKEN_EXPIRE_MINUTES = settings.access_token_expire_minutes
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
@@ -24,15 +30,15 @@ def get_password_hash(password: str) -> str:
     return pwd_context.hash(password)
 
 
-def get_user_by_email(db: Session, email: str) -> Optional[models.User]:
+def get_user_by_email(db: Session, email: str) -> Optional[UserModel]:
     """Get a user by email"""
-    return db.query(models.User).filter(models.User.email == email).first()
+    return db.query(UserModel).filter(UserModel.email == email).first()
 
 
-def create_user(db: Session, user: schemas.UserCreate) -> models.User:
+def create_user(db: Session, user: UserCreate) -> UserModel:
     """Create a new user in the database"""
     hashed_password = get_password_hash(user.password)
-    db_user = models.User(
+    db_user = UserModel(
         email=user.email,
         username=user.username,
         full_name=user.full_name,
@@ -41,16 +47,17 @@ def create_user(db: Session, user: schemas.UserCreate) -> models.User:
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
-    
+
     # Create a default user profile
-    db_profile = models.UserProfile(user_id=db_user.id)
+    from models import UserProfile
+    db_profile = UserProfile(user_id=db_user.id)
     db.add(db_profile)
     db.commit()
-    
+
     return db_user
 
 
-def authenticate_user(db: Session, email: str, password: str) -> Optional[models.User]:
+def authenticate_user(db: Session, email: str, password: str) -> Optional[UserModel]:
     """Authenticate a user by email and password"""
     user = get_user_by_email(db, email)
     if not user or not verify_password(password, user.hashed_password):
@@ -72,10 +79,10 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
 
 
 from fastapi import Depends
-from ..database import get_db
+from database import get_db
 
 
-def get_current_user(token: str) -> Optional[models.User]:
+def get_current_user(token: str) -> Optional[UserModel]:
     """Get the current user from the JWT token"""
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
@@ -86,7 +93,7 @@ def get_current_user(token: str) -> Optional[models.User]:
         return None
 
     # Create a temporary DB session to get the user
-    from ..database import SessionLocal
+    from database import SessionLocal
     db = SessionLocal()
     try:
         user = get_user_by_email(db, email=email)

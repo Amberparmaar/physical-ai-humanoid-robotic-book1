@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Physical AI & Humanoid Robotics',
   tagline: 'An AI-Native Textbook',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://amberparmaar.github.io',
@@ -57,6 +57,10 @@ const config = {
     ],
   ],
 
+  themes: [
+    // ... other themes
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -66,7 +70,7 @@ const config = {
         title: 'Physical AI & Humanoid Robotics',
         logo: {
           alt: 'Physical AI & Robotics Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
@@ -78,16 +82,6 @@ const config = {
           {
             to: '/courses',
             label: 'Course Modules',
-            position: 'left',
-          },
-          {
-            to: '/simulator',
-            label: 'Robot Simulator',
-            position: 'left',
-          },
-          {
-            to: '/tutor',
-            label: 'AI Tutor',
             position: 'left',
           },
           {
@@ -133,14 +127,6 @@ const config = {
           {
             title: 'Learning Tools',
             items: [
-              {
-                label: 'Robot Simulator',
-                to: '/simulator',
-              },
-              {
-                label: 'AI Tutor Access',
-                to: '/tutor',
-              },
               {
                 label: 'Course Modules',
                 to: '/courses',

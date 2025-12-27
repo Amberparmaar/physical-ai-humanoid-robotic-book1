@@ -1,0 +1,32 @@
+Instructions for Creating Robot-Themed JPG Images:
+
+To replace the current SVG images with colored JPG images of AI robots, follow these steps:
+
+1. Create ai.jpg (200x200 pixels)
+   - Create an image of a friendly robot with a focus on AI elements
+   - Use your theme colors: #BBC863 (green) and #000000 (black)
+   - Include visual elements that suggest intelligence or AI processing
+
+2. Create favicon.jpg (16x16 pixels or 32x32 pixels)
+   - Create a small, iconic robot image
+   - Keep it simple but recognizable at small sizes
+   - Use high contrast colors for visibility in browser tabs
+
+3. Create logo.jpg (200x200 pixels)
+   - Design a robot-themed logo for your site
+   - Ensure it's recognizable but detailed enough to be interesting
+   - Consider how it will look as a site logo
+
+4. Create robot.jpg (200x200 pixels)
+   - Create a detailed image of an AI robot
+   - Use your theme colors: #BBC863 (green) and #000000 (black)
+   - Make it visually appealing for your robotics content
+
+5. Create tech-stack.jpg (200x200 pixels)
+   - Create a robot-themed image that represents technology stack
+   - Show robot components or a robot in a tech environment
+   - Use your theme colors throughout
+
+After creating these images, place them in the static/img/ directory alongside the SVG files.
+
+Then update your docusaurus.config.js file to reference the new JPG files where necessary.

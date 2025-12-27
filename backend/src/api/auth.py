@@ -4,16 +4,21 @@ from sqlalchemy.orm import Session
 from typing import Optional
 import jwt
 from datetime import datetime, timedelta
-from ..database import get_db
-from .. import schemas, models
-from ..services import auth as auth_service
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from database import get_db
+from schemas import User, UserCreate
+from models import User as UserModel
+from services import auth as auth_service
 
 router = APIRouter()
 security = HTTPBearer()
 
 
-@router.post("/register", response_model=schemas.User)
-def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
+@router.post("/register", response_model=User)
+def register_user(user: UserCreate, db: Session = Depends(get_db)):
     """Register a new user"""
     # Check if user already exists
     existing_user = auth_service.get_user_by_email(db, user.email)
@@ -29,7 +34,7 @@ def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
 
 
 @router.post("/login")
-def login_user(credentials: schemas.UserCreate, db: Session = Depends(get_db)):
+def login_user(credentials: UserCreate, db: Session = Depends(get_db)):
     """Login an existing user"""
     user = auth_service.authenticate_user(db, credentials.email, credentials.password)
     if not user:
@@ -43,7 +48,7 @@ def login_user(credentials: schemas.UserCreate, db: Session = Depends(get_db)):
     return {"access_token": access_token, "token_type": "bearer"}
 
 
-@router.get("/profile", response_model=schemas.User)
+@router.get("/profile", response_model=User)
 def get_profile(
     token: HTTPAuthorizationCredentials = Depends(security),
     db: Session = Depends(get_db)
