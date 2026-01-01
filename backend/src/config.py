@@ -40,6 +40,11 @@ class Settings(BaseSettings):
     context7_mcp_host: str = os.getenv("CONTEXT7_MCP_HOST", "localhost")
     context7_mcp_port: int = int(os.getenv("CONTEXT7_MCP_PORT", 8000))  # Fixed: added int conversion
 
+    # OpenRouter settings
+    openrouter_api_key: Optional[str] = os.getenv("OPENROUTER_KEY")
+    openrouter_model: str = os.getenv("OPENROUTER_MODEL", "openai/gpt-3.5-turbo")
+    openrouter_base_url: str = "https://openrouter.ai/api/v1"
+
     class Config:
         env_file = ".env"
 
