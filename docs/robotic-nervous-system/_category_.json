@@ -1,0 +1,8 @@
+{
+  "label": "Module 1: Robotic Nervous System (ROS 2)",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about the communication infrastructure that enables robots to function as cohesive, intelligent systems."
+  }
+}

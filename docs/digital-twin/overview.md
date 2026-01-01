@@ -1,0 +1,1 @@
+Digital twin technology creates virtual replicas of physical systems, enabling safe development, testing, and optimization of Vision-Language-Action systems. This module covers the fundamentals of twin architecture, sensor simulation, action generation, validation techniques, and integration with physical systems to bridge digital AI with real-world robotics applications.

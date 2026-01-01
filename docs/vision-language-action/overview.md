@@ -1,0 +1,1 @@
+Vision-Language-Action (VLA) systems represent the integration of perception, cognition, and action in embodied AI. This module covers the foundations of multimodal learning, vision processing, language understanding, action generation, and their integration into cohesive systems that can understand natural language instructions and execute physical actions in real environments.
