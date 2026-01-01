@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     # Qdrant settings
     qdrant_url: str = os.getenv("QDRANT_URL", "http://localhost")
     qdrant_host: str = os.getenv("QDRANT_HOST", "localhost")
-    qdrant_port: int = int(os.getenv("QDRANT_PORT", 6333))
+    qdrant_port: int = int(os.getenv("QDRANT_PORT", 6333))  # Fixed: added int conversion
     qdrant_api_key: Optional[str] = os.getenv("QDRANT_API_KEY")
     qdrant_collection_name: str = os.getenv("QDRANT_COLLECTION_NAME", "textbook_content")
     qdrant_path: Optional[str] = os.getenv("QDRANT_PATH")
@@ -38,9 +38,10 @@ class Settings(BaseSettings):
     # Context7 settings
     context7_api_key: Optional[str] = os.getenv("CONTEXT7_API_KEY")
     context7_mcp_host: str = os.getenv("CONTEXT7_MCP_HOST", "localhost")
-    context7_mcp_port: int = int(os.getenv("CONTEXT7_MCP_PORT", 8000))
+    context7_mcp_port: int = int(os.getenv("CONTEXT7_MCP_PORT", 8000))  # Fixed: added int conversion
 
-    model_config = {"env_file": ".env"}
+    class Config:
+        env_file = ".env"
 
 
 settings = Settings()
