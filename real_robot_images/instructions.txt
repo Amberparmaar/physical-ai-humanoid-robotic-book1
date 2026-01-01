@@ -1,0 +1,30 @@
+This directory will contain the real robot images once you source them.
+
+To source real robot images for your project:
+
+1. Visit websites with royalty-free robot images such as:
+   - Unsplash (https://unsplash.com/s/photos/robot)
+   - Pexels (https://www.pexels.com/search/robot/)
+   - Pixabay (https://pixabay.com/images/search/robot/)
+   - Open Images Dataset (https://storage.googleapis.com/openimages/web/index.html)
+
+2. Make sure to select images that align with your theme colors (#BBC863 and #000000)
+
+3. When downloading images, make sure to:
+   - Comply with the license terms of each image
+   - For commercial use, ensure images are released under appropriate licenses
+   - Attribute the photographer if required by the license
+
+4. Recommended sizes:
+   - Logo: 200x200 pixels
+   - Favicon: 16x16 or 32x32 pixels (you may need to convert to .ico format)
+   - Other images: 200x200 pixels as specified in the original SVG files
+
+5. Name your images to match the original SVG names:
+   - ai.jpg
+   - favicon.jpg
+   - logo.jpg
+   - robot.jpg
+   - tech-stack.jpg
+
+Once you download the images, place them in this directory and update the paths in your docusaurus.config.js if needed.

@@ -1,20 +1,24 @@
 from fastapi import APIRouter, HTTPException
 from typing import List
-from .. import schemas
-from ..services.rag import rag_service
-from ..services.enhanced_rag import enhanced_rag_service
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from schemas import ChatMessage, ChatResponse, Content
+from services.rag import rag_service
+from services.enhanced_rag import enhanced_rag_service
 import asyncio
 
 router = APIRouter()
 
 
-@router.post("/search", response_model=schemas.ChatResponse)
-async def search_content(query: schemas.ChatMessage):
+@router.post("/search", response_model=ChatResponse)
+async def search_content(query: ChatMessage):
     """Search content using the enhanced RAG system with Context7 integration"""
     search_results = await enhanced_rag_service.search_content(query.message)
 
     if not search_results:
-        return schemas.ChatResponse(
+        return ChatResponse(
             response="No relevant content found in the textbook.",
             context_used=[],
             sources=[]
@@ -41,7 +45,7 @@ async def search_content(query: schemas.ChatMessage):
 
 
 @router.post("/embed", response_model=dict)
-async def create_embeddings(content: schemas.Content):
+async def create_embeddings(content: Content):
     """Create embeddings for content using both Qdrant and Context7"""
     try:
         # Add content to both Qdrant and Context7 using enhanced service
@@ -72,7 +76,7 @@ def delete_embeddings(content_id: int):
 
 
 @router.put("/embed/{content_id}", response_model=dict)
-async def update_embeddings(content_id: int, content: schemas.Content):
+async def update_embeddings(content_id: int, content: Content):
     """Update embeddings for existing content in vector database"""
     try:
         metadata = {"title": content.title, "type": content.content_type, "source": f"docs/{content.content_type}/{content.slug}.md"}

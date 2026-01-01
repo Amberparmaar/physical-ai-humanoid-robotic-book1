@@ -91,30 +91,32 @@ const AiTutor = () => {
         <h2>AI Tutor for Physical AI & Humanoid Robotics</h2>
         <p>Ask me anything about ROS2, Gazebo, NVIDIA Isaac, VLA models, and more!</p>
       </div>
-      
+
       <div className="chat-messages">
         {messages.map((message) => (
-          <ChatMessage 
-            key={message.id} 
-            message={message.text} 
-            isUser={message.isUser} 
+          <ChatMessage
+            key={message.id}
+            message={message.text}
+            isUser={message.isUser}
           />
         ))}
         {isLoading && (
-          <ChatMessage 
-            message="Thinking..." 
-            isUser={false} 
+          <ChatMessage
+            message="Thinking..."
+            isUser={false}
           />
         )}
         <div ref={messagesEndRef} />
       </div>
-      
-      <ChatInput 
-        onSendMessage={handleSendMessage} 
-        disabled={isLoading} 
+
+      <ChatInput
+        onSendMessage={handleSendMessage}
+        disabled={isLoading}
       />
     </div>
   );
 };
 
+// Export named for the floating chatbot
+export { AiTutor };
 export default AiTutor;

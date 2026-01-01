@@ -1,0 +1,336 @@
+openapi: 3.0.0
+info:
+  title: BookReader Urdu Translation API
+  description: API for the BookReader application with Urdu translation functionality
+  version: 1.0.0
+paths:
+  /api/books:
+    get:
+      summary: Get list of available books
+      description: Retrieve a list of all available books in the system
+      responses:
+        '200':
+          description: List of books
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+    post:
+      summary: Upload a new book
+      description: Add a new book to the system with English content and optional Urdu translation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookInput'
+      responses:
+        '201':
+          description: Book successfully added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+        '400':
+          description: Invalid input data
+
+  /api/books/{bookId}:
+    get:
+      summary: Get book content
+      description: Retrieve the content of a specific book
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Book content
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookContent'
+        '404':
+          description: Book not found
+
+  /api/books/{bookId}/translate:
+    post:
+      summary: Get Urdu translation for selected text
+      description: Get the Urdu translation of selected English text from a book
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TranslationRequest'
+      responses:
+        '200':
+          description: Urdu translation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TranslationResponse'
+        '400':
+          description: Invalid request
+        '404':
+          description: Book not found
+
+  /api/user/preferences:
+    get:
+      summary: Get user preferences
+      description: Retrieve current user preferences for font size, theme, and language
+      responses:
+        '200':
+          description: User preferences
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserPreferences'
+    put:
+      summary: Update user preferences
+      description: Update user preferences for font size, theme, and language
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserPreferences'
+      responses:
+        '200':
+          description: Updated preferences
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserPreferences'
+        '400':
+          description: Invalid preferences
+
+  /api/books/{bookId}/progress:
+    get:
+      summary: Get reading progress
+      description: Retrieve user's progress in a specific book
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Reading progress
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReadingProgress'
+    put:
+      summary: Update reading progress
+      description: Update user's progress in a specific book
+      parameters:
+        - name: bookId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReadingProgress'
+      responses:
+        '200':
+          description: Updated progress
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReadingProgress'
+        '400':
+          description: Invalid progress data
+
+components:
+  schemas:
+    Book:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the book
+        title:
+          type: string
+          description: Title of the book
+        author:
+          type: string
+          description: Author of the book
+        format:
+          type: string
+          enum: [plain_text, pdf, epub]
+          description: Format of the book content
+        language:
+          type: string
+          description: Original language of the book (default: English)
+        hasUrduTranslation:
+          type: boolean
+          description: Whether the book has Urdu translation available
+        length:
+          type: integer
+          description: Length of the book in characters
+      required:
+        - id
+        - title
+        - author
+        - format
+        - language
+
+    BookInput:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the book
+        author:
+          type: string
+          description: Author of the book
+        format:
+          type: string
+          enum: [plain_text, pdf, epub]
+          description: Format of the book content
+        originalText:
+          type: string
+          description: Original English text content
+        urduTranslation:
+          type: string
+          description: Optional Urdu translation of the content
+      required:
+        - title
+        - author
+        - format
+        - originalText
+
+    BookContent:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the book
+        title:
+          type: string
+          description: Title of the book
+        author:
+          type: string
+          description: Author of the book
+        paragraphs:
+          type: array
+          items:
+            $ref: '#/components/schemas/Paragraph'
+        metadata:
+          $ref: '#/components/schemas/BookMetadata'
+
+    Paragraph:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the paragraph
+        originalText:
+          type: string
+          description: English paragraph text
+        urduTranslation:
+          type: string
+          description: Urdu translation of the paragraph
+        position:
+          type: integer
+          description: Position of the paragraph in the book
+
+    BookMetadata:
+      type: object
+      properties:
+        format:
+          type: string
+          enum: [plain_text, pdf, epub]
+          description: Format of the book content
+        language:
+          type: string
+          description: Original language of the book
+        length:
+          type: integer
+          description: Length of the book in characters
+        hasUrduTranslation:
+          type: boolean
+          description: Whether the book has Urdu translation available
+
+    TranslationRequest:
+      type: object
+      properties:
+        text:
+          type: string
+          description: English text to translate
+        paragraphId:
+          type: string
+          description: Optional, if translating a specific paragraph
+        context:
+          type: string
+          description: Optional, surrounding context for better translation
+      required:
+        - text
+
+    TranslationResponse:
+      type: object
+      properties:
+        originalText:
+          type: string
+          description: The original English text
+        urduTranslation:
+          type: string
+          description: The translated Urdu text
+        confidence:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: Confidence level of the translation
+
+    UserPreferences:
+      type: object
+      properties:
+        fontSize:
+          type: integer
+          minimum: 12
+          maximum: 36
+          description: Font size in pixels (default: 16)
+        theme:
+          type: string
+          enum: [light, dark]
+          description: UI theme (default: light)
+        languagePreference:
+          type: string
+          enum: [english, urdu, both]
+          description: Language display preference (default: english)
+        readingMode:
+          type: string
+          enum: [side_by_side, toggle]
+          description: How to display translations (default: toggle)
+
+    ReadingProgress:
+      type: object
+      properties:
+        bookId:
+          type: string
+          description: ID of the book
+        currentParagraphId:
+          type: string
+          description: ID of the current paragraph
+        position:
+          type: integer
+          description: Current position in the book (in percentage)
+        lastReadAt:
+          type: string
+          format: date-time
+          description: Timestamp of last reading session

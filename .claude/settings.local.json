@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"\nimport os\nimport sys\n\n# Add the backend/src directory to the Python path \\(like run_server.py does\\)\nsys.path.insert\\(0, os.path.join\\(os.getcwd\\(\\), ''backend'', ''src''\\)\\)\n\n# Set the environment variable directly before importing\nos.environ[''QDRANT_PATH''] = ''C:/Users/hp/Desktop/physical-ai-humanoid-robotics/backend/src/qdrant_data''\n\nfrom services.enhanced_rag import enhanced_rag_service\nimport asyncio\n\nprint\\(''Testing enhanced RAG service from main directory with absolute path...''\\)\n\nasync def test_search\\(\\):\n    results = await enhanced_rag_service.search_content\\(''ROS2'', limit=3\\)\n    print\\(f''Found {len\\(results\\)} results for \"\"ROS2\"\" query''\\)\n    for i, result in enumerate\\(results\\):\n        print\\(f''Result {i+1}: Score: {result.get\\(\"\"score\"\", \"\"N/A\"\"\\)}, Content preview: {result.get\\(\"\"text\"\", \"\"\"\"\\)[0:100]}...''\\)\n    return results\n\nresults = asyncio.run\\(test_search\\(\\)\\)\nprint\\(f''Total results: {len\\(results\\)}''\\)\n\")",
+      "Bash(python run_server.py)"
+    ]
+  }
+}

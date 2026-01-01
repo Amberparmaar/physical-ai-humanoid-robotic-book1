@@ -1,13 +1,18 @@
 from fastapi import APIRouter, Depends
 from typing import List
-from .. import schemas
-from ..services import auth
-from ..models import User
-from ..services.rag import rag_service
-from ..services.enhanced_rag import enhanced_rag_service
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from schemas import ChatMessage, ChatResponse
+from services import auth
+from models import User
+from services.rag import rag_service
+from services.enhanced_rag import enhanced_rag_service
 import openai
-from ..config import settings
+from config import settings
 import asyncio
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
 router = APIRouter()
 
@@ -16,12 +21,10 @@ if settings.openai_api_key:
     openai.api_key = settings.openai_api_key
 
 
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-
 security = HTTPBearer()
 
 async def get_current_user_from_token(token: HTTPAuthorizationCredentials = Depends(security)):
-    from ..database import SessionLocal
+    from database import SessionLocal
     db = SessionLocal()
     try:
         user = auth.get_current_user(token.credentials)
@@ -36,9 +39,9 @@ async def get_current_user_from_token(token: HTTPAuthorizationCredentials = Depe
     finally:
         db.close()
 
-@router.post("/chat", response_model=schemas.ChatResponse)
+@router.post("/chat", response_model=ChatResponse)
 async def chat_with_bot(
-    message: schemas.ChatMessage,
+    message: ChatMessage,
     current_user: User = Depends(get_current_user_from_token)
 ):
     """Chat with the textbook AI assistant using enhanced RAG with Context7"""
@@ -107,7 +110,7 @@ async def chat_with_bot(
     )
 
 
-@router.get("/history", response_model=List[schemas.ChatMessage])
+@router.get("/history", response_model=List[ChatMessage])
 def get_chat_history(
     current_user: User = Depends(get_current_user_from_token)
 ):
@@ -115,6 +118,6 @@ def get_chat_history(
     # This is a placeholder - in a real implementation, this would
     # fetch chat history from the database
     return [
-        schemas.ChatMessage(message="Hello, what is ROS2?", user_id=current_user.id),
-        schemas.ChatMessage(message="How does Gazebo work?", user_id=current_user.id)
+        ChatMessage(message="Hello, what is ROS2?", user_id=current_user.id),
+        ChatMessage(message="How does Gazebo work?", user_id=current_user.id)
     ]

@@ -82,6 +82,16 @@ class Content(ContentBase):
         orm_mode = True
 
 
+# Token schema
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+class TokenData(BaseModel):
+    username: Optional[str] = None
+
+
 # Chat schemas
 class ChatMessage(BaseModel):
     message: str
